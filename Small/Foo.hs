@@ -8,5 +8,5 @@ import Language.Haskell.TH
 
 -- compiled = $(compileShaderQ Nothing "frag" Nothing frag)
 
-answer :: Int
-answer = $(litE (IntegerL (6 * 7)))  -- evaluates to 42 at compile time
+myString :: String
+myString = $(litE (StringL ("foo" ++ frag)))
