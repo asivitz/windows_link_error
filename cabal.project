@@ -4,20 +4,6 @@ packages:
   .
 
 package dear-imgui
-  flags: -opengl3 +vulkan +sdl -glfw
-
-constraints:
-  vulkan ==3.26.2,
-  vulkan-utils ==0.5.10.6
-
-source-repository-package
-  type: git
-  location: https://github.com/asivitz/dear-imgui.hs.git
-  tag: 3e4a6eae8480de872a9051f9b224f393a32b311b
-
-source-repository-package
-  type: git
-  location: https://github.com/asivitz/sdl2.git
-  tag: 0c78116f98343199664671ee18eef4bd86557003
+  flags: -opengl3 -vulkan -sdl -glfw
 
 allow-newer: all

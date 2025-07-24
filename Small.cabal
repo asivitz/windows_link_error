@@ -9,12 +9,8 @@ library
       Small.Foo
   other-modules:
       Small.Dep
-  default-extensions:
-      OverloadedStrings
   build-depends:
       base
     , dear-imgui
-    , rawstring-qm
-    , text
     , vulkan-utils
   default-language: GHC2021
