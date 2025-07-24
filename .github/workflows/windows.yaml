@@ -1,0 +1,47 @@
+name: Win Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-2025
+    timeout-minutes: 30
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: true
+    env:
+      MSYSTEM: CLANG64
+
+    defaults:
+      run:
+        shell: msys2 {0}
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: msys2/setup-msys2@v2
+      with:
+        msystem: CLANG64
+        release: false
+        path-type: inherit
+
+    - name: Install GHC & Cabal
+      shell: pwsh
+      run: |
+        ghcup install ghc --set 9.12.2
+        ghcup install cabal --set 3.16.0.0
+        cabal update
+
+    - name: Configure Cabal where MSYS2’s libs are
+      run: |
+        cat >> /c/cabal/config <<'EOF'
+        extra-include-dirs: C:\msys64\clang64\include
+        extra-lib-dirs:     C:\msys64\clang64\lib
+        extra-prog-path:    C:\msys64\clang64\bin
+                            C:\msys64\usr\bin
+        EOF
+
+    - name: Build
+      run: |
+        cabal build Small
