@@ -12,6 +12,5 @@ library
   build-depends:
       base
     , dear-imgui
-    , vulkan-utils
     , template-haskell
   default-language: GHC2021
