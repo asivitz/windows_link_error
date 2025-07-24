@@ -1,0 +1,20 @@
+cabal-version: 1.12
+
+name:           Small
+version:        0.0.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Small.Foo
+  other-modules:
+      Small.Dep
+  default-extensions:
+      OverloadedStrings
+  build-depends:
+      base
+    , dear-imgui
+    , rawstring-qm
+    , text
+    , vulkan-utils
+  default-language: GHC2021
