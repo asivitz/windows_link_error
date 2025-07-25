@@ -10,7 +10,6 @@ library
   build-depends:
       base
     , template-haskell
-    , inline-c
     , inline-c-cpp
     , system-cxx-std-lib
   default-language: GHC2021
