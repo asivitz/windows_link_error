@@ -14,6 +14,6 @@ library
     , system-cxx-std-lib
   default-language: GHC2021
   cxx-sources:
-    foo.cpp
+    foreign_fun.cpp
   include-dirs:
     include

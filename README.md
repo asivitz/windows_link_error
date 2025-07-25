@@ -5,6 +5,8 @@ The interaction is between inline-c and template haskell.
 It appears in GHCs 9.8.4-9.12.2 (and perhaps others).
 It appears in cabal-installs 3.10.3-3.16.0.0 (and perhaps others).
 
+Build with `cabal build Small`
+
 ```
 Building library for Small-0.0.0...
 [1 of 2] Compiling Small.Dep        ( Small\Dep.hs, dist-newstyle\build\x86_64-windows\ghc-9.12.2\Small-0.0.0\build\Small\Dep.o )

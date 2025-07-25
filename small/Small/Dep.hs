@@ -1,10 +1,10 @@
 module Small.Dep where
 
-import CPPDep.Foreign (hfoo)
+import CPPDep.Foreign (c_foreign_fun)
 import GHC.Ptr (nullPtr)
 
 depString :: String
 depString = "bar"
 
 myHFoo :: IO ()
-myHFoo = hfoo
+myHFoo = c_foreign_fun
