@@ -6,6 +6,6 @@ import GHC.Ptr (nullPtr)
 depString :: String
 depString = "bar"
 
-myBegin :: IO Bool
-myBegin = Raw.begin nullPtr (Just nullPtr) Nothing
+myEnd :: IO ()
+myEnd = Raw.end
 
