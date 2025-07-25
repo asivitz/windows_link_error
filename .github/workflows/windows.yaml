@@ -44,4 +44,4 @@ jobs:
 
     - name: Build
       run: |
-        cabal build Small
+        cabal build -v3 Small
