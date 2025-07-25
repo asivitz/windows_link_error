@@ -11,10 +11,8 @@ library
       base
     , template-haskell
     , inline-c
-    , inline-c-cpp
-    , system-cxx-std-lib
   default-language: GHC2021
-  cxx-sources:
-    foo.cpp
+  c-sources:
+    foo.c
   include-dirs:
     include
