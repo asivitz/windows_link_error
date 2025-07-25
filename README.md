@@ -1,6 +1,9 @@
 This project demonstrates a linking error that appears only on Windows.
 
-The interaction between the dear-imgui library (perhaps because it uses inline-c?) and template haskell.
+The interaction is between inline-c and template haskell.
+
+It appears in GHCs 9.8.4-9.12.2 (and perhaps others).
+It appears in cabal-installs 3.10.3-3.16.0.0 (and perhaps others).
 
 ```
 Building library for Small-0.0.0...
