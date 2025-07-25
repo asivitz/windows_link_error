@@ -9,7 +9,6 @@ library
       CPPDep.Foreign
   build-depends:
       base
-    , system-cxx-std-lib
   default-language: GHC2021
   cxx-sources:
     foreign_fun.cpp
