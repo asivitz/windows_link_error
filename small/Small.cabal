@@ -11,6 +11,6 @@ library
       Small.Dep
   build-depends:
       base
-    , dear-imgui
+    , CPPDep
     , template-haskell
   default-language: GHC2021

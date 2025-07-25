@@ -1,11 +1,10 @@
 module Small.Dep where
 
-import qualified DearImGui.Raw as Raw
+import CPPDep.Foreign (hfoo)
 import GHC.Ptr (nullPtr)
 
 depString :: String
 depString = "bar"
 
-myEnd :: IO ()
-myEnd = Raw.end
-
+myHFoo :: IO ()
+myHFoo = hfoo

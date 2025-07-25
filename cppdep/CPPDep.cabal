@@ -1,0 +1,20 @@
+cabal-version: 2.2
+
+name:           CPPDep
+version:        0.0.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      CPPDep.Foreign
+  build-depends:
+      base
+    , template-haskell
+    , inline-c
+    , inline-c-cpp
+  default-language: GHC2021
+  extra-libraries: stdc++
+  cxx-sources:
+    foo.cpp
+  include-dirs:
+    include

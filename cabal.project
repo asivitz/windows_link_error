@@ -1,9 +1,7 @@
 import: https://www.stackage.org/nightly-2025-07-23/cabal.config
 
 packages:
-  .
-
-package dear-imgui
-  flags: -opengl3 -vulkan -sdl -glfw
+  ./small
+  ./cppdep
 
 allow-newer: all
