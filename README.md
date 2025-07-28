@@ -24,4 +24,4 @@ ghc-9.12.2.exe: Could not load Object Code C:\a\windows_link_error\windows_link_
 ```
 
 The build itself is producible via the github action workflow in this repo. Example run here:
-https://github.com/asivitz/windows_link_error/actions/runs/16530471509/job/46754351821
+https://github.com/asivitz/windows_link_error/actions/runs/16574254449/job/46874423492
