@@ -1,6 +1,6 @@
 module Small.Dep where
 
-import CPPDep.Foreign (c_foreign_fun)
+import Small.Foreign (c_foreign_fun)
 import GHC.Ptr (nullPtr)
 
 depString :: String

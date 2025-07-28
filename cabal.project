@@ -2,6 +2,5 @@ import: https://www.stackage.org/nightly-2025-07-25/cabal.config
 
 packages:
   ./small
-  ./cppdep
 
 allow-newer: all

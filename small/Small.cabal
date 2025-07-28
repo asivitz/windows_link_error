@@ -1,4 +1,4 @@
-cabal-version: 1.12
+cabal-version: 2.2
 
 name:           Small
 version:        0.0.0
@@ -9,8 +9,12 @@ library
       Small.Foo
   other-modules:
       Small.Dep
+      Small.Foreign
   build-depends:
       base
-    , CPPDep
     , template-haskell
   default-language: GHC2021
+  cxx-sources:
+    foreign_fun.cpp
+  include-dirs:
+    include
