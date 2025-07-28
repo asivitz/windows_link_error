@@ -1,6 +1,6 @@
 import: https://www.stackage.org/nightly-2025-07-25/cabal.config
 
 packages:
-  ./small
+  ./
 
 allow-newer: all
