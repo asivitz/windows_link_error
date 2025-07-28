@@ -2,9 +2,11 @@ This project demonstrates a linking error that appears only on Windows.
 
 The interaction is between C++ source files and template haskell.
 
+```
 Condition 1: Module 1 imports a foreign symbol.
 Condition 2: The foreign symbol is defined in a '.cpp' file (not '.c'). The '.cpp' source file is included in the package via c-sources or cxx-sources.
 Condition 3: Module 2 imports some definition from Module 1. Module 2 contains template haskell.
+```
 
 Presumably, while generating the TH code for Module 2, it tries to link in Module 1 but can't find the foreign symbol from the .cpp file.
 
