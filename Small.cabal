@@ -9,7 +9,6 @@ library
       Small.Foo
   other-modules:
       Small.Dep
-      Small.Foreign
   build-depends:
       base
     , template-haskell

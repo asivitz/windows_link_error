@@ -1,7 +1,8 @@
 module Small.Dep where
 
-import Small.Foreign (c_foreign_fun)
 import GHC.Ptr (nullPtr)
+
+foreign import ccall "foreign_fun" c_foreign_fun :: IO ()
 
 depString :: String
 depString = "bar"
