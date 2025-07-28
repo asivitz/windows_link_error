@@ -1,7 +1,12 @@
 This project demonstrates a linking error that appears only on Windows.
 
 The interaction is between C++ source files and template haskell.
-If a '.cpp' source file is included (via c-sources or cxx-sources), it seems to not be included in the TH link step.
+
+Condition 1: Module 1 imports a foreign symbol.
+Condition 2: The foreign symbol is defined in a '.cpp' file (not '.c'). The '.cpp' source file is included in the package via c-sources or cxx-sources.
+Condition 3: Module 2 imports some definition from Module 1. Module 2 contains template haskell.
+
+Presumably, while generating the TH code for Module 2, it tries to link in Module 1 but can't find the foreign symbol from the .cpp file.
 
 It appears in GHCs 9.8.4-9.12.2 (and perhaps others).
 It appears in cabal-installs 3.10.3-3.16.0.0 (and perhaps others).
