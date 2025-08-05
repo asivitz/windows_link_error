@@ -1,1 +1,1 @@
-void foreign_fun();
+void foreign_fun(void);

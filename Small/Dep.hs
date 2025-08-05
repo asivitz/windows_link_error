@@ -1,3 +1,5 @@
+{-# LANGUAGE ForeignFunctionInterface #-}
+
 module Small.Dep where
 
 foreign import ccall "foreign_fun" c_foreign_fun :: IO ()
